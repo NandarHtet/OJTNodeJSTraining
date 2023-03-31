@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Birthday</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Age Claculator</h1>
+    <form action="/" method="POST">
+    <h2>Choose your birthday</h2>
+      Date : <br> <br>
+      <input type="text" name="date" id="date" placeholder="dd" minlength="1" maxlength="2" required>  <br> <br>
+      Month : <br> <br>
+      <input type="text" name="month" id="month" placeholder="mm" minlength="1" maxlength="2" required>  <br> <br>
+      Year : <br> <br>
+      <input type="text" name="year" id="year" placeholder="yyyy" minlength="4" maxlength="4" required> <br> <br>
+      <button type="submit">Calculate Age</button>
+    </form>
+    <% if (typeof data !== 'undefined') { %>
+      <h2><%= data.resultAge %></h2>
+    <% } %>
+  </div>
+</body>
+</html>
