@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUDwithFile</title>
+  <style>
+     body{
+      background-color: #ffffff;
+     }
+     h1{
+      text-align: center;
+      color: #5f9ea0;
+     }
+     form{
+      background-color: #5f9ea0;
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 70px;
+     }
+     input{
+      border:0.5px solid #5f9ea0;
+      outline: none;
+      padding: 7px;
+      border-radius: 5px;
+     }
+     button{
+      background-color: #ffffff;
+      border: none;
+      padding: 7px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+     }
+     table{
+      width: 300px;
+      margin: 0 auto;
+      background-color: #5f9ea0;
+      border-radius: 5px;
+      color:#ffffff;
+      cursor: pointer;
+     }
+     table td{
+      text-align: center;
+     }
+     div{
+      color: #ff0000;
+      width: 300px;
+      margin: 0 auto 10px;
+     }
+  </style>
+</head>
+<body>
+  <h1>CRUD File Sysrem</h1>
+  <% if(typeof alert !== 'undefined') { %>
+    <% alert.forEach (function(error) { %>
+      <div>
+        <%= error.msg %>
+      </div>
+    <% }) %>
+    <% } %>
+  <form action="/" method="post">
+    Name : <input type="text" name="userName" placeholder="Enter your name..."><br><br>
+    Password : <input type="password" name="userPassword" placeholder="Enter your password..."><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <% if(typeof resultData !== 'undefined') { %>
+    <table>
+      <thead>
+        <th>NAME</th>
+        <th>PASSWORD</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= resultData.userName %></td>
+          <td><%= resultData.userPassword %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% } %>
+
+</body>
+</html>
