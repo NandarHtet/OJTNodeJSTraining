@@ -27,7 +27,7 @@ localhost:5000/feet_inch_to_cm/[number]/[number]
 
 ```
 git clone https://github.com/NandarHtet/OJTNodeJSTraining/tree/master/Assignment03
-cd assignment03
+cd Assignment03
 npm install
 node index.js
 
