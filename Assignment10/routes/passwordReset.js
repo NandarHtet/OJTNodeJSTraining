@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 
         const link = `${process.env.BASE_URL}/password-reset/${user._id}/${token.token}`;
         await sendEmail(user.email, "Password reset", link);
-        
+
         res.send("password reset link sent to your email account");
     } catch (error) {
         res.send("An error occured");
@@ -51,7 +51,7 @@ router.post("/:userId/:token", async (req, res) => {
 
         user.password = req.body.password;
         await user.save();
-        await token.delete();
+        delete( await token );
 
         res.send("password reset sucessfully.");
     } catch (error) {
